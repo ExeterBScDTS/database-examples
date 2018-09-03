@@ -20,9 +20,7 @@ public class NoSqlDemo {
     public static void main(String[] args) {
 
         MongoClient mongoClient = MongoClients.create();
-
         MongoDatabase database = mongoClient.getDatabase("test");
-
         MongoCollection<Document> collection = database.getCollection("testCollection");
         collection.createIndex(Indexes.geo2dsphere("location"));
 
