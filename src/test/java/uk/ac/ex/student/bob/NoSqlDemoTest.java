@@ -12,6 +12,7 @@ import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Indexes;
 
 import org.bson.Document;
+import uk.ac.ex.student.bob.PotholeReport;
 
 public class NoSqlDemoTest {
 
