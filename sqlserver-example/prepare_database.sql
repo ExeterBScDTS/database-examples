@@ -1,6 +1,5 @@
 -- Create a new database called 'POTHOLE_REPORTS'
--- Connect to the 'master' database to run this snippet
-USE master
+USE master;
 GO
 -- Create the new database if it does not exist already
 IF NOT EXISTS (
@@ -8,7 +7,7 @@ IF NOT EXISTS (
         FROM sys.databases
         WHERE name = 'POTHOLE_REPORTS'
 )
-CREATE DATABASE POTHOLE_REPORTS
+CREATE DATABASE POTHOLE_REPORTS;
 GO
 
 
@@ -35,15 +34,4 @@ GO
 
 -- Show the columns in the reports table
 SELECT * FROM REPORTS;
-GO
-
--- This will need to be done from an Admin account -
--- CREATE LOGIN PotholeAdmin WITH PASSWORD = 'p0tHo13Z$1'
--- GO
-
-IF NOT EXISTS (SELECT * FROM sys.database_principals WHERE name = N'PotholeAdmin')
-BEGIN
-    CREATE USER PotholeAdmin FOR LOGIN PotholeAdmin
-    EXEC sp_addrolemember N'db_owner', N'PotholeAdmin'
-END;
 GO

@@ -5,6 +5,10 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import com.microsoft.sqlserver.jdbc.Geography;
+import com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement;
+import com.microsoft.sqlserver.jdbc.SQLServerResultSet;
+
 
 public class SqlDemo {
 
@@ -22,6 +26,25 @@ public class SqlDemo {
                 System.out.println("A report");
                 //System.out.println(rs.getString("FirstName") + " " + rs.getString("LastName"));
             }
+
+            // See 
+            // https://docs.microsoft.com/en-us/sql/connect/jdbc/spatial-data-types-sample?view=sql-server-2017
+
+            String geoWKT = "POINT(-0.6 5.0)";
+            Geography geogWKT = Geography.STGeomFromText(geoWKT, 4326);
+            int id = 3;
+            try (SQLServerPreparedStatement pstmt = (SQLServerPreparedStatement) con
+                    .prepareStatement("insert into " + "REPORTS" + " values (?,?,null,null,null,null,null)");) {
+                pstmt.setObject(1, id);
+                pstmt.setGeography(2, geogWKT);
+                pstmt.execute();
+
+                SQLServerResultSet rs2 = (SQLServerResultSet) stmt.executeQuery("select * from " + "REPORTS");
+                rs2.next();
+
+                System.out.println("Geography data: " + rs2.getGeography(2));
+            }
+
             System.out.println("All done.");
         }
         // Handle any errors that may have occurred.
