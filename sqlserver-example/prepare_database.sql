@@ -1,3 +1,9 @@
+-- To run this script in VS Code
+-- 1. Connect to database
+-- 2. Press CTRL+SHIFT+E
+-- See https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-develop-use-vscode?view=sql-server-2017
+
+
 -- Create a new database called 'POTHOLE_REPORTS'
 USE master;
 GO
@@ -15,16 +21,18 @@ GO
 USE POTHOLE_REPORTS;
 GO
 
+-- DROP TABLE REPORTS;
+-- GO
+
 CREATE TABLE REPORTS 
 (
-    REPORT_ID integer NOT NULL,
+    REPORT_ID integer IDENTITY(1,1) PRIMARY KEY,
     LOCATION geography NOT NULL,
     DATE_REPORTED smalldatetime,
     DATE_OBSERVED smalldatetime,
     REPORTED_BY varchar(20),
     DEPTH double precision,
-    DIAMETER double precision,
-    PRIMARY KEY (REPORT_ID) 
+    DIAMETER double precision
 );
 GO
 
