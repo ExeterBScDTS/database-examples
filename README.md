@@ -33,6 +33,17 @@ You will probably want to use Maven to fetch and install the driver.  See ```pom
 ### Tutorial
 https://docs.oracle.com/javase/tutorial/jdbc/basics/index.html
 
+## Servlet example
+
+This is a very basic example. Accessing the database from a servlet class of from JSP is the same as for a Java application.
+
+You must first install the driver file ```mssql-jdbc-7.0.0.jre8.jar``` in ```jetty-distribuition/lib/ext```.
+
+Download the driver from here https://docs.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-2017
+
+
+See https://www.eclipse.org/jetty/documentation/9.4.x/jndi-datasource-examples.html for more information.
+
 ## NoSQL example
 
 ## MongoDB
