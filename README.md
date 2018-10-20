@@ -37,7 +37,7 @@ https://docs.oracle.com/javase/tutorial/jdbc/basics/index.html
 
 This is a very basic example. Accessing the database from a servlet class, or from JSP, is the same as for a Java application.
 
-You must first install the driver file ```mssql-jdbc-7.0.0.jre8.jar``` in ```jetty-distribuition/lib/ext```.
+You must first install the driver file ```mssql-jdbc-7.0.0.jre8.jar``` in ```jetty-distribution/lib/ext```.
 
 Download the driver from here https://docs.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-2017
 
