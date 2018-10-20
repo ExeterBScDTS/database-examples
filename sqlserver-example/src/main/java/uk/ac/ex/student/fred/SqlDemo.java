@@ -19,6 +19,7 @@ public class SqlDemo {
 
         try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement();) {
 
+            System.out.println(con);
             // See 
             // https://docs.microsoft.com/en-us/sql/connect/jdbc/spatial-data-types-sample?view=sql-server-2017
 
