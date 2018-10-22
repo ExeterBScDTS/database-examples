@@ -32,5 +32,20 @@
  </dependencies>
 
  <build>
+ <plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>uk.ac.ex.student.fred.SqlDemo</mainClass>
+              <addClasspath>true</addClasspath>
+              <classpathPrefix>../</classpathPrefix>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+    </plugins>
  </build>
 </project>
