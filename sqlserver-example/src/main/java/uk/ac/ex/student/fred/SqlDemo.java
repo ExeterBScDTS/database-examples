@@ -2,11 +2,11 @@ package uk.ac.ex.student.fred;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import com.microsoft.sqlserver.jdbc.Geography;
 import com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement;
+//import java.sql.ResultSet;
 import com.microsoft.sqlserver.jdbc.SQLServerResultSet;
 
 
