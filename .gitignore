@@ -12,3 +12,6 @@ buildNumber.properties
 .project
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
+.vscode/launch.json
+.vscode/settings.json
+sqlserver-example/mssql-jdbc-7.0.0.jre10.jar
