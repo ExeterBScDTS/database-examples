@@ -88,31 +88,4 @@ Download the driver from here https://docs.microsoft.com/en-us/sql/connect/jdbc/
 
 See https://www.eclipse.org/jetty/documentation/9.4.x/jndi-datasource-examples.html for more information.
 
-## NoSQL example
-
-## MongoDB
-
-https://mongodb.github.io/mongo-java-driver/
-
-https://code.visualstudio.com/docs/azure/mongodb
-
-### Learning
-
-There is a free online course https://university.mongodb.com/courses/M101J/about 
-
-Guides on installation, etc. https://docs.mongodb.com/guides/
-
-Simple example https://www.baeldung.com/java-mongodb Repo here https://github.com/eugenp/tutorials/tree/master/persistence-modules/java-mongodb
-
-### Data modelling
-
-https://docs.mongodb.com/manual/core/data-modeling-introduction/
-
-Converting your Java objects into database documents can be a chore.  Take a look at this guide for best practice.
-
-https://www.mongodb.com/blog/post/getting-started-with-mongodb-and-java-part-i
-
-Working with dates and times www.ntu.edu.sg/home/ehchua/programming/java/DateTimeCalendar.html
-
-
 
