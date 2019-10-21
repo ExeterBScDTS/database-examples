@@ -25,7 +25,6 @@ public class SqlDemo {
 
             String geoWKT = "POINT(-0.6 5.0)";
             Geography geogWKT = Geography.STGeomFromText(geoWKT, 4326);
-            int id = 3;
             try (SQLServerPreparedStatement pstmt = 
             (SQLServerPreparedStatement) con.prepareStatement("insert into " + "REPORTS" + " values (?,?,?,?,?,?)");) {
                 pstmt.setGeography(1, geogWKT);

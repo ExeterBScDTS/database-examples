@@ -4,6 +4,8 @@
 
 Install SQL Server if you don't already have it.
 
+The command line tool ```SQLCMD``` can be used to create and access databases using SQL instructions.
+
 Ensure your server will accept TCP connections and you know which port it is using.  See support.webecs.com/kb/a868/how-do-i-configure-sql-server-express-to-allow-remote-tcp-ip-connections-on-port-1433.aspx
 
 You will also need "mixed mode" logins, which can be set during installation.
