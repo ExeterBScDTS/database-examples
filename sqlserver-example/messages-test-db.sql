@@ -52,7 +52,7 @@ CREATE PROCEDURE pr_delete_msg @item integer
 AS
     SET NOCOUNT ON
     DELETE FROM MESSAGES WHERE ITEM_ID = @item
-
+GO
 
 -- Test the create procedure
 DECLARE @now smalldatetime = GETDATE()
