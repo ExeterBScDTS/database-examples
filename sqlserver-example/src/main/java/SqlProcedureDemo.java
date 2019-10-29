@@ -11,7 +11,7 @@ public class SqlProcedureDemo {
     public static void main(String[] args) {
 
         // Create a variable for the connection string.
-        String connectionUrl = "jdbc:sqlserver://localhost\\SQLEXPRESS:1433;user=JavaUser;password=java$12345";
+        String connectionUrl = "jdbc:sqlserver://localhost:1433;user=JavaUser;password=java$12345";
 
         try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement();) {
 
@@ -31,7 +31,7 @@ public class SqlProcedureDemo {
             pr_create_msg.setInt("user", 2);
             pr_create_msg.setNull("reply", 0);
             pr_create_msg.setTimestamp("date", msg_time);
-            pr_create_msg.setString("txt", "Everything is fine.");
+            pr_create_msg.setString("txt", "Everything else is fine.");
 
             pr_create_msg.execute();
 

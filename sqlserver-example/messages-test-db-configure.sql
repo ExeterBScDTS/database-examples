@@ -21,6 +21,10 @@ CREATE USER JavaUser FOR LOGIN JavaUser
 EXEC sp_addrolemember N'db_owner', N'JavaUser'
 GO
 
+-- The above can be tested with
+-- sqlcmd -S tcp:localhost,1433 -U JavaUser
+-- 
+
 -- This may be required to enable the new account to login
 -- if Window users only were enabled when SQL Server was installed.
 -- This works for SQL Server Express.
