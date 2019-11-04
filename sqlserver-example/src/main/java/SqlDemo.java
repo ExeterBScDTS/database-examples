@@ -16,6 +16,7 @@ public class SqlDemo {
 
             System.out.println("\nConnection:\n\t" + con + "\n");
             
+            con.close();
             System.out.println("All done.");
         }
         // Handle any errors that may have occurred.

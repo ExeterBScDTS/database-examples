@@ -33,8 +33,6 @@ public class SqlProcedureDemo {
             pr_create_msg.setTimestamp("date", msg_time);
             pr_create_msg.setString("txt", "Everything else is fine.");
 
-            pr_create_msg.execute();
-
             System.out.println("All done.");
         }
         // Handle any errors that may have occurred.

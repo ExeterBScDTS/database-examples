@@ -37,6 +37,19 @@
     <finalName>servletdemo</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
+         <!-- see https://www.eclipse.org/jetty/documentation/9.4.x/jetty-maven-plugin.html -->
+         <plugin>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-maven-plugin</artifactId>
+            <version>9.4.22.v20191022</version>
+            <configuration>
+            <webApp>
+              <_initParams>  
+                <org.eclipse.jetty.servlet.Default.useFileMappedBuffer>false</org.eclipse.jetty.servlet.Default.useFileMappedBuffer>
+              </_initParams>
+            </webApp>
+           </configuration>
+        </plugin>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.0.0</version>
