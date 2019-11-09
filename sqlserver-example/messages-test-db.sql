@@ -57,7 +57,6 @@ GO
 -- Test the create procedure
 DECLARE @now smalldatetime = GETDATE()
 EXECUTE pr_create_msg 1, 1, NULL, @now, "Hello, world!"
-EXECUTE pr_create_msg 2, 1, NULL, @now, "Item 2"
 
 -- Test the list procedure
 EXECUTE pr_list_msg @item=1
