@@ -10,7 +10,7 @@ public class SqlDemo {
     public static void main(String[] args) {
 
         // Create a variable for the connection string.
-        String connectionUrl = "jdbc:sqlserver://localhost\\SQLEXPRESS:1433;user=JavaUser;password=java$12345";
+        String connectionUrl = "jdbc:sqlserver://localhost:1433;user=JavaUser;password=java$12345";
 
         try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement();) {
 
